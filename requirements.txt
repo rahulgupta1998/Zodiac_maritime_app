@@ -1,0 +1,8 @@
+dash==4.3.0
+plotly>=6.0,<7
+pandas>=2.2,<3
+dash-ag-grid==35.2.0
+dash-bootstrap-components>=2,<3
+gunicorn>=23,<24
+databricks-sql-connector>=3,<5
+python-dotenv>=1,<2

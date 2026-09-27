@@ -1,0 +1,9 @@
+# Databricks Apps execution configuration.
+# DATABRICKS_APP_PORT is substituted by Databricks at runtime.
+command:
+  - gunicorn
+  - app:server
+  - --bind
+  - 0.0.0.0:$DATABRICKS_APP_PORT
+  - --workers
+  - "2"
