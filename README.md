@@ -60,19 +60,19 @@ http://127.0.0.1:8050
 
 ## 5. Assumptions to review before submission
 
-The assessment requires a "sane range" for Power % / Speed % but does not define exact bounds. This scaffold uses 0–200 and documents that as an assumption. Adjust it after reviewing the real dataset.
+The assessment requires a "same range" for Power % / Speed % but does not define exact bounds. This scaffold uses 0–200 and documents that as an assumption. Adjust it after reviewing the real dataset.
 
 The table has an internal `row_id` because the brief intentionally includes a duplicate Report_ID. Report_ID remains the business identifier and is what is recorded in the audit log.
 
 ## 6. Databricks direction
 
-The take-home asks SQLite to stand in for a Databricks Delta MERGE/UPSERT. For a production version, replace the SQLite data access layer with Databricks SQL Warehouse/Delta access. The current code keeps database access isolated in `database/db.py` to make that substitution easier.
+The project asks SQLite to stand in for a Databricks Delta MERGE/UPSERT. For a production version, replace the SQLite data access layer with Databricks SQL Warehouse/Delta access. The current code keeps database access isolated in `database/db.py` to make that substitution easier.
 
 ## 7. Deployment outline
 
 1. Test locally.
 2. Put the project into a Git repository or Databricks workspace folder.
-3. Create/configure a Databricks App.
+3. Create a Databricks App.
 4. Deploy the project using the Databricks Apps workflow.
 5. Keep `app.yaml`, `requirements.txt`, and `app.py` at the project root.
 6. Configure resources/secrets separately when connecting to Databricks SQL.
